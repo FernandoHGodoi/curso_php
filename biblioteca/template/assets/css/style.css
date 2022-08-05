@@ -7571,11 +7571,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: rgb(255,189,65);
+  color: white;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: rgb(255,189,65);
+    color: white;
     text-decoration: underline; }
 
 a:not([href]):not([class]) {
@@ -9315,12 +9315,12 @@ fieldset:disabled .wizard > .actions a,
 
 .btn-primary, .wizard > .actions a {
   color: #fff;
-  background-color: rgb(255,189,65);
-  border-color: rgb(255, 166, 0); }
+  background-color: #9BF2EA;
+  border-color: #41BFB3; }
   .btn-primary:hover, .wizard > .actions a:hover {
     color: #fff;
-    background-color: rgb(255, 224, 166);
-    border-color: rgb(255, 199, 94); }
+    background-color: #c9fcf7;
+    border-color: #76f5e8; }
   .btn-primary:focus, .wizard > .actions a:focus, .btn-primary.focus, .wizard > .actions a.focus {
     color: #fff;
     background-color: #0078c1;
@@ -9421,26 +9421,26 @@ fieldset:disabled .wizard > .actions a,
 
 .btn-warning {
   color: #212529;
-  background-color: #ffab00;
-  border-color: #ffab00; }
+  background-color: #41BFB3;
+  border-color: #41BFB3; }
   .btn-warning:hover {
     color: #212529;
-    background-color: #d99100;
-    border-color: #cc8900; }
+    background-color: #41BFB3;
+    border-color: #41BFB3; }
   .btn-warning:focus, .btn-warning.focus {
     color: #212529;
-    background-color: #d99100;
-    border-color: #cc8900;
+    background-color: #41BFB3;
+    border-color: #41BFB3;
     box-shadow: 0 0 0 0.2rem rgba(222, 151, 6, 0.5); }
   .btn-warning.disabled, .btn-warning:disabled {
     color: #212529;
-    background-color: #ffab00;
-    border-color: #ffab00; }
+    background-color: #41BFB3;
+    border-color: #41BFB3; }
   .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
   .show > .btn-warning.dropdown-toggle {
     color: #fff;
-    background-color: #cc8900;
-    border-color: #bf8000; }
+    background-color: #41BFB3;
+    border-color: #41BFB3; }
     .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,
     .show > .btn-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(222, 151, 6, 0.5); }
