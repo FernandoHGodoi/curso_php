@@ -43,7 +43,7 @@
                     <div class="col-12 grid-margin">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">ATUALIZAR LIVRO</h4>
+                                <h4 class="card-title">ATUALIZAR USUARIO</h4>
                                 <!-- CONEXAO COM O BANCO -->
                                 <?php include '../../conexao.php' ?>
 <!-------------------------------------------------------------------------------------------------------------->
@@ -51,14 +51,14 @@
                                 <table id="atualiza_livro" class="" width="100%">
                                   <thead>
                                     <tr>
-                                      <th>Título</th>
-                                      <th>Autor</th>
-                                      <th>Editora</th>
-                                      <th>Ano</th>
-                                      <th>Sinopse</th>
-                                      <th>Valor</th>
-                                      <th>Qtd</th>
-                                      <th>Editar</th>
+                                      <th>Nome</th>
+                                      <th>CPF</th>
+                                      <th>Rua</th>
+                                      <th>Bairro</th>
+                                      <th>Número</th>
+                                      <th>Cidade</th>
+                                      <th>Estado</th>
+                                      <th>Email</th>
                                     </tr>
                                   </thead>
                                   <tbody>
