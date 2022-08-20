@@ -56,33 +56,32 @@
                                       <th>Editora</th>
                                       <th>Ano</th>
                                       <th>Sinopse</th>
-                                      <th>Capa</th>
-                                      <th>Valor aluguel</th>
-                                      <th>Quantidade</th>
+                                      <th>Valor</th>
+                                      <th>Qtd</th>
                                       <th>Editar</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <?php
-                                      $result_atualiza_livro = "SELECT `nm_livro`, `autor_id`, `editora_id`, `ano`, `sinopse`, 
-                                      `capa`, `preco`, quantidade FROM `livro`";
+                                      $result_atualiza_livro = "SELECT `livro_id`, `nm_livro`, `autor_id`, `editora_id`, `ano`, `sinopse`, 
+                                      `preco`, quantidade FROM `livro`";
 
                                       $resultado_atualiza_livro = mysqli_query($conn, $result_atualiza_livro);
                                       
 
-                                      while($rows_resultado = mysqli_fetch_assoc($resultado_atualiza_livro)){ ?>
+                                      while($rows_resultado = mysqli_fetch_assoc($resultado_atualiza_livro)){ 
+                                        $id = $rows_resultado['livro_id'];
+                                        ?>
+                                      
                                       <tr>
                                         <td><?php echo $rows_resultado['nm_livro']; ?></td>
-                                        <!-- EXEMPLO DE VALUE QUE POSSIBILITA A EDICAO DENTRO DO INPUT -->
-                                        <td><input type="text" value="<?php echo $rows_resultado['nm_livro']; ?>"></td>
                                         <td><?php echo $rows_resultado['autor_id']; ?></td>
                                         <td><?php echo $rows_resultado['editora_id']; ?></td>
                                         <td><?php echo $rows_resultado['ano']; ?></td>
                                         <td><?php echo $rows_resultado['sinopse']; ?></td>
-                                        <td><?php echo $rows_resultado['capa']; ?></td>
                                         <td><?php echo $rows_resultado['preco']; ?></td>
                                         <td><?php echo $rows_resultado['quantidade']; ?></td>
-                                        <td> <button type="submit" class="btn btn-primary"><i class="fas fa-edit"></i></button> </td>
+                                        <td><a href="editar.php?id=<?php echo $id ?>" > <button type="submit" class="btn btn-primary"><i class="fas fa-edit"></i></button> </a> </td>
                                       </tr>
                                     <?php } ?>
                                   </tbody>
@@ -93,9 +92,8 @@
                                       <th>Editora</th>
                                       <th>Ano</th>
                                       <th>Sinopse</th>
-                                      <th>Capa</th>
-                                      <th>Valor aluguel</th>
-                                      <th>Quantidade</th>
+                                      <th>Valor</th>
+                                      <th>Qtd</th>
                                     </tr>
                                   </tfoot>
                                 </table>
