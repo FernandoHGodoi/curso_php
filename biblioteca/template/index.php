@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include_once("conexao.php"); 
+    include_once("conexao.php"); 
 ?>
 <html lang="pt-br">
     <head>
@@ -10,7 +10,7 @@ include_once("conexao.php");
         <meta name="author" content="" />
         <title>Loca Livros - Home</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" href="index/assets/e-book.png" />
+        <link rel="icon" type="image/png" href="index/assets/localivros2.0.png" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -19,15 +19,16 @@ include_once("conexao.php");
         <!--CHAMANDO UM ARQUIVO CSS DO SITE FONT AWESOME-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.php"><img alt="logomarca loca livros" src="index/assets/localivros.png" width="70%"></a>
+                <a class="navbar-brand" href="index.php"><img alt="logomarca loca livros" src="index/assets/localivros2.0.png" width="20%"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">

@@ -1,8 +1,10 @@
 <?php  
-  session_start(); 
- // Se o usuário não está logado, manda para página de login.
- include_once 'acesso_restrito.php';
+  include 'acesso_restrito.php';
+  include 'conexao.php';
+  
+  session_start();  
 ?>
+
 <br>
 
 <!DOCTYPE html>
