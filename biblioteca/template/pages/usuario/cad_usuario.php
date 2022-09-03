@@ -1,3 +1,9 @@
+<?php  
+  include '../../acesso_restrito.php';
+  include '../../conexao.php';
+  
+  session_start();  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>

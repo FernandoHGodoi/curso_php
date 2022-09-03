@@ -1,3 +1,9 @@
+<?php  
+  include '../../acesso_restrito.php';
+  include_once("../../conexao.php"); 
+  
+  session_start();  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -39,13 +45,12 @@
             <div class="content-wrapper">
                 
                 <div class="row">
-                    <!-- INICIO DIV FORM -->
+                    <!-- INICIO DIV TABLE -->
                     <div class="col-12 grid-margin">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">ATUALIZAR LIVRO</h4>
-                                <!-- CONEXAO COM O BANCO -->
-                                <?php include '../../conexao.php' ?>
+
 <!-------------------------------------------------------------------------------------------------------------->
                                 <!-- INICIO DA TABLE -->
                                 <table id="atualiza_livro" class="" width="100%">
@@ -57,14 +62,12 @@
                                       <th>Ano</th>
                                       <th>Sinopse</th>
                                       <th>Valor</th>
-                                      <th>Qtd</th>
-                                      <th>Editar</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <?php
                                       $result_atualiza_livro = "SELECT `livro_id`, `nm_livro`, `autor_id`, `editora_id`, `ano`, `sinopse`, 
-                                      `preco`, quantidade FROM `livro`";
+                                      `preco` FROM `livro`";
 
                                       $resultado_atualiza_livro = mysqli_query($conn, $result_atualiza_livro);
                                       
@@ -80,7 +83,6 @@
                                         <td><?php echo $rows_resultado['ano']; ?></td>
                                         <td><?php echo $rows_resultado['sinopse']; ?></td>
                                         <td><?php echo $rows_resultado['preco']; ?></td>
-                                        <td><?php echo $rows_resultado['quantidade']; ?></td>
                                         <td><a href="editar.php?id=<?php echo $id ?>" > <button type="submit" class="btn btn-primary"><i class="fas fa-edit"></i></button> </a> </td>
                                       </tr>
                                     <?php } ?>
@@ -93,7 +95,6 @@
                                       <th>Ano</th>
                                       <th>Sinopse</th>
                                       <th>Valor</th>
-                                      <th>Qtd</th>
                                     </tr>
                                   </tfoot>
                                 </table>

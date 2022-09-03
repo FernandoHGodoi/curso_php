@@ -1,3 +1,10 @@
+<?php  
+  include '../../acesso_restrito.php';
+  include '../../conexao.php';
+  
+  session_start();  
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -39,11 +46,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">CADASTRAR LIVRO</h4>
-                                <!-- CONEXAO COM O BANCO -->
-                                <?php include '../../conexao.php' ?>
 
                                 <!-- INICIO FORM -->
-                                <form action="envia_cad_livro.php" class="form-sample" method="post" enctype="multipart/form-data">
+                                <form action="envia_cad_livro.php" class="form-sample" method="post">
 
                                     <!-- SESSÃO INFORMAÇÕES DO LIVRO -->
                                     <p class="card-description"> INFORMAÇÕES DO LIVRO </p>
@@ -163,11 +168,21 @@
                                             <div class="form-group row">
                                                 <label for="capa" class="col-sm-3 col-form-label">Capa</label>
                                                 <div class="col-sm-9">
-                                                    <input type="file" id="capa" name="capa" class="form-control">
+                                                    <input type="file" id="capa" name="capa" accept="image/*" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php
+                                        if(isset($_FILES['capa']))
+                                        {
+                                            $ext = strtolower(substr($_FILES['capa']['name'],-4)); //Pegando extensão do arquivo
+                                            $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+                                            $dir = './imagens/'; //Diretório para uploads 
+                                            move_uploaded_file($_FILES['capa']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+                                            echo("Imagen enviada com sucesso!");
+                                        } 
+                                    ?>
 
                                     <!-- LINHA 5 -->
                                     <div class="row">
@@ -182,15 +197,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- QUANTIDADE -->
-                                        <div class="col-md-6">
-                                            <div class="form-group row">
-                                                <label for="qtd" class="col-sm-3 col-form-label">Quantidade *</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" id="qtd" name="quantidade" class="form-control" required>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <!-- LINHA 6 -->
